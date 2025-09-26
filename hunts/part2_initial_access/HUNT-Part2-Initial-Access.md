@@ -45,6 +45,7 @@ At least one user executed the attachment.
 
 Plan of Action
 	1.	Review stream:smtp logs for August.
+	
 	2.	Pivot to Sysmon logs for process creation (Event ID 1).
 
 
@@ -66,7 +67,7 @@ Scroll to the bottom and select “more fields.”
 
 Field Selection
 
-Splunk doesn’t auto-display all fields.
+`Splunk doesn’t auto-display all fields.
 At minimum, select:
 	•	receiver
 	•	sender
@@ -75,13 +76,13 @@ At minimum, select:
 	•	attach_filename{}
 	•	attach_type{}
 	•	attach_size{}
-	•	attach_content_md5_hash{}
+	•	attach_content_md5_hash{}`
 
 ![Select fields](./images/select_fields.png) 
 
 Suspicious Attachment
-	•	Double-click attach_filename{}
-	•	Suspicious file: Invoice.zip
+	`•	Double-click attach_filename{}
+	•	Suspicious file: Invoice.zip`
 
 ![Select fields](./images/invoice_zip_list.png)
 
@@ -92,6 +93,7 @@ Filtered down to 4 events.
 Query: [`email_fields_invoice_zip.spl`](./queries/splunk/email_fields_invoice_zip.spl)
 
 Result:
+
 	•	Same sender, subject, filename, size, hash, type across all 4 emails.
 
 ![Common denominators](./images/common_denominators.png) 
