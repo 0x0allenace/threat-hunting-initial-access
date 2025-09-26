@@ -1,0 +1,9 @@
+##############################################
+# broad_invoice_zip_no_sourcetype.spl
+# Purpose: discover which sourcetypes recorded invoice.zip (ONLY run with tight time window)
+# Timepicker: narrow to minutes/hours around the spike (e.g., 23 Aug 2017)
+##############################################
+
+index=botsv2 invoice.zip sourcetype!="stream:smtp"
+| stats count by sourcetype, host, _time
+| sort - count

@@ -1,0 +1,32 @@
+# IOCs extracted from Part 2 - Initial Access (BOTS v2)
+# Format: one IOC per line (type:value or free-form)
+
+# IPs
+ip:185.83.51.21
+ip:45.77.65.211
+
+# Domains / services
+domain:ymlp.com
+
+# URLs
+url:https://45.77.65.211/login/process.php
+
+# Email addresses / senders
+email:jsmith@urinalysis.com
+display_name:Jim Smith <jsmith@urinalysis.com>
+
+# Filenames / subjects
+filename:Invoice.zip
+inner_filename:invoice.doc
+subject:Invoice
+
+# Hosts / users
+host:wrk-btun
+user:billy.tun
+
+# Observables / artifacts
+attach_content_md5:<attach_md5_here>
+
+# Notes / context
+note:Same attachment sent to four recipients (two waves; first failed, second delivered)
+note:Suspicious base64-encoded PowerShell decoded and found to contact C2 at 45.77.65.211

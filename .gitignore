@@ -1,0 +1,8 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Notebooks/cache (if you add later)
+.ipynb_checkpoints/
+__pycache__/

@@ -1,0 +1,9 @@
+##############################################
+# host_reverse_timeline.spl
+# Purpose: show the host timeline in reverse order for a given host (example host=wrk-btun)
+# Set timepicker to the time of the first Sysmon event; replace host value if necessary
+##############################################
+
+index=botsv2 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" host="wrk-btun"
+| sort - _time
+| table _time, EventCode, Computer, host, User, Image, ParentImage, CommandLine, EventDescription

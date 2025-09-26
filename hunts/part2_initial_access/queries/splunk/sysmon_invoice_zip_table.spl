@@ -1,0 +1,9 @@
+##############################################
+# sysmon_invoice_zip_table.spl
+# Purpose: show Sysmon events related to invoice.zip (process creation / file activity)
+# Adjust sourcetype if your Sysmon sourcetype differs
+##############################################
+
+index=botsv2 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" invoice.zip
+| table _time, Computer, host, User, EventCode, EventDescription, Image, ParentImage, CommandLine
+| sort _time

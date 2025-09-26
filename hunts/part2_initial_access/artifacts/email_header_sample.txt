@@ -1,0 +1,24 @@
+Return-Path: <jsmith@urinalysis.com>
+Received: from mail.urinalysis.com (185.83.51.21)
+    by mx.microsoft.com with ESMTP id <20230823091530.12345.abc123@mx.microsoft.com>;
+    Wed, 23 Aug 2017 09:15:30 +0000
+Received: from [10.10.5.23] (helo=wrk-btun.urinalysis.com)
+    by mail.urinalysis.com with ESMTPA
+    id <20170823091528.ABCDEF1234@mail.urinalysis.com>;
+    Wed, 23 Aug 2017 09:15:28 +0000
+Message-ID: <20170823091528.ABCDEF1234@mail.urinalysis.com>
+Date: Wed, 23 Aug 2017 09:15:28 +0000
+From: Jim Smith <jsmith@urinalysis.com>
+To: billy.tun@example.com, jane.doe@example.com, john.smith@example.com, alice.lee@example.com
+Subject: Invoice
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_NextPart_000_002D_01D12345.ABCDEF12"
+Content-Language: en-US
+
+Authentication-Results: mx.microsoft.com;
+    spf=fail (sender IP is 185.83.51.21) smtp.mailfrom=urinalysis.com;
+    dkim=fail (signature invalid) header.d=urinalysis.com;
+    dmarc=fail action=quarantine header.from=urinalysis.com
+Received-SPF: Fail (mx.microsoft.com: domain of urinalysis.com does not designate 185.83.51.21 as permitted sender) client-ip=185.83.51.21; 
+Authentication-Results: dkim=fail reason="bad signature" (2048-bit key)
+ARC-Authentication-Results: i=1; spf=fail; dkim=fail; dmarc=fail

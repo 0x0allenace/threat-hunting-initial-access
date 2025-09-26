@@ -1,0 +1,9 @@
+##############################################
+# email_fields_invoice_zip.spl
+# Purpose: lookup SMTP events that reference invoice.zip and list key email fields
+# Use timepicker = 23 Aug 2017 (or August 2017 as needed)
+##############################################
+
+index=botsv2 sourcetype=stream:smtp "attach_filename{}"="invoice.zip"
+| table _time, receiver, sender, src_ip, subject, attach_filename{}, attach_type{}, attach_size{}, attach_content_md5_hash{}
+| sort - _time

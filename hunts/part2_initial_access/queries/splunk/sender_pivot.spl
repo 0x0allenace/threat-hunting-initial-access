@@ -1,0 +1,9 @@
+##############################################
+# sender_pivot.spl
+# Purpose: pivot on a sender to find other emails they sent
+# Replace sender value as needed (example uses Jim Smith)
+##############################################
+
+index=botsv2 sourcetype=stream:smtp sender="Jim Smith <jsmith@urinalysis.com>"
+| table _time, receiver, sender, src_ip, subject, attach_filename{}, attach_type{}, attach_size{}, attach_content_md5_hash{}
+| sort - _time
