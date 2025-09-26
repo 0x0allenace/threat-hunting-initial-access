@@ -45,9 +45,7 @@ At least one user executed the attachment.
 
 Plan of Action
 	1.	Review stream:smtp logs for August.
-	
 	2.	Pivot to Sysmon logs for process creation (Event ID 1).
-
 
 Initial Query
 
@@ -57,7 +55,7 @@ Set time picker → August 2017
 
 Our first query will be for smtp logs.
 
-index=botsv2 sourcetype=stream:smtp
+`index=botsv2 sourcetype=stream:smtp`
 
 ![Smtp search](./images/smtp_search.png)
 
@@ -67,9 +65,9 @@ Scroll to the bottom and select “more fields.”
 
 Field Selection
 
-`Splunk doesn’t auto-display all fields.
+Splunk doesn’t auto-display all fields.
 At minimum, select:
-	•	receiver
+	`•	receiver
 	•	sender
 	•	src_ip
 	•	subject
@@ -82,7 +80,7 @@ At minimum, select:
 
 Suspicious Attachment
 	`•	Double-click attach_filename{}
-	•	Suspicious file: Invoice.zip`
+	 •	Suspicious file: Invoice.zip`
 
 ![Select fields](./images/invoice_zip_list.png)
 
@@ -94,7 +92,7 @@ Query: [`email_fields_invoice_zip.spl`](./queries/splunk/email_fields_invoice_zi
 
 Result:
 
-	•	Same sender, subject, filename, size, hash, type across all 4 emails.
+•	Same sender, subject, filename, size, hash, type across all 4 emails.
 
 ![Common denominators](./images/common_denominators.png) 
 
@@ -198,8 +196,6 @@ Query: [`sender_pivot.spl`](./queries/splunk/sender_pivot.spl)
 Result: same sender targeted recipients 13 days earlier.
 
 ![Sender](./images/sender_13days_prior.png)
-
-Suspicious text file + base64 in body.
 
 ![Sender](./images/sender_13days_prior.png)
 
