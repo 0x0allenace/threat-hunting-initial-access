@@ -1,7 +1,5 @@
 # Cyber Threat Hunting with Splunk – Part 2: Initial Access
 
-# Table of Contents
-
 ## Summary
 In this lesson we continue cyber threat hunting using Splunk and the **BOTS v2 dataset**.  
 The prior exercise covered the **Reconnaissance** phase. This one focuses on **Initial Access**, specifically spear phishing.
