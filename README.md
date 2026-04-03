@@ -17,6 +17,15 @@ It focuses on **Initial Access** via spearphishing, detection of **user executio
 2. Copy SPL queries from `queries/splunk/` into Splunk  
 3. Follow along with screenshots in `images/`  
 
+## 🔗 Attack Lifecycle Series
+
+This project is part of a multi-stage threat hunting series:
+
+1. [Part 1: Reconnaissance](https://github.com/0x0allenace/threat-hunting-recon)
+2. Part 2: Initial Access (this repository)
+
+Each phase builds on the previous stage to simulate a realistic attack investigation workflow.
+
 ## Attribution
 
 Dataset: [Splunk BOTS v2](https://bots.splunk.com/)  
